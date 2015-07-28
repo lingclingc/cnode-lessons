@@ -17,8 +17,9 @@ app.get('/', function (req, res) {
   // utility 的 github 地址：https://github.com/node-modules/utility
   // 里面定义了很多常用且比较杂的辅助方法，可以去看看
   var md5Value = utility.md5(q);
-
-  res.send(md5Value);
+  var sha1Value = utility.sha1(q);
+  res.send('md5 :'+ md5Value +' , sha1:' +sha1Value);
+  //res.send(md5Value);
 });
 
 app.listen(3000, function (req, res) {
