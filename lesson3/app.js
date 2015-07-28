@@ -14,9 +14,11 @@ app.get('/',function (req,res,next) {
 		var items = [];
 		$('#topic_list .topic_title').each(function (idx,element){
 			var $element = $(element);
+			var $authorParent = $element.parentsUntil('.cell');
 			items.push({
 				title:$element.attr('title'),
-				href:$element.attr('href')
+				href:$element.attr('href'),
+				author:$authorParent.children('.user_avatar').children('img').attr('title'),
 				});
 		});		
 		res.send(items);
