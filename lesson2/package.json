@@ -1,0 +1,26 @@
+{
+  "name": "lingclesson2",
+  "version": "1.0.0",
+  "description": "nothing but node",
+  "main": "index.js",
+  "scripts": {
+    "test": "hello"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/github.com/lingclingc.git"
+  },
+  "keywords": [
+    "nothing"
+  ],
+  "author": "lingc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/github.com/lingclingc/issues"
+  },
+  "homepage": "https://github.com/github.com/lingclingc#readme",
+  "dependencies": {
+    "express": "^4.13.1",
+    "utility": "^1.4.0"
+  }
+}
