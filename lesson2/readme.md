@@ -4,3 +4,4 @@
 
 安装了sublimegit来快速的提交版本；
 
+git 提交的时候需要将文件先`staged`，然后在本地`commit`，然后再`push`到`github`上
