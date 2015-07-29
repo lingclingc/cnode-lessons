@@ -2,6 +2,11 @@ var express = require('express');
 var cheerio = require('cheerio');
 var superagent = require('superagent');
 
+//添加url解析模块
+
+var url = require('url');
+var baseUrl = 'https://www.cnodejs.org';
+
 var app = express();
 
 app.get('/',function (req,res,next) {
@@ -17,7 +22,7 @@ app.get('/',function (req,res,next) {
 			var $authorParent = $element.parentsUntil('.cell');
 			items.push({
 				title:$element.attr('title'),
-				href:$element.attr('href'),
+				href:url.resolve(baseUrl,$element.attr('href')),
 				author:$authorParent.children('.user_avatar').children('img').attr('title'),
 				});
 		});		
