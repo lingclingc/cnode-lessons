@@ -1,10 +1,12 @@
 var eventproxy = require('eventproxy');
 var superagent = require('superagent');
 var cheerio = require('cheerio');
+//加载url解析模块
 var url = require('url');
 
 var cnodeUrl = 'https://cnodejs.org/';
 
+//superagent 的 end方法用来发起请求
 superagent.get(cnodeUrl)
 	.end(function(err, res) {
 		if (err) {
